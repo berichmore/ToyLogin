@@ -10,6 +10,21 @@ $(document).ready(function (){
     })
 })
 
+//로그아웃
+function logoutUser(){
+    $.ajax({
+        url: '/api/member/logout',
+        type: 'POST',
+        success: function(){
+            alert("로그아웃이 완료되었습니다.");
+            window.location.href = "/login";
+        },
+        error: function (){
+            alert("로그아웃이 실패하였습니다.");
+        }
+    })
+}
+
 
 //로그인 페이지
 function loginUser(){
@@ -17,6 +32,20 @@ function loginUser(){
         userId: $('#userId').val(),
         userPassword: $('#userPassword').val()
     };
+
+    $.ajax({
+        url: '/api/member/login',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (response){
+            alert('로그인이 완료되었습니다' + response.userName);
+            window.location.href = '/';
+        },
+        error: function (xhr){
+            alert('로그인 실패 : '  + xhr.responseText);
+        }
+    })
 
 
 }
