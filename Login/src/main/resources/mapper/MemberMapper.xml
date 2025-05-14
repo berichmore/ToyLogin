@@ -15,7 +15,7 @@
         INSERT INTO member
             (user_id, user_password, user_name, user_email, role)
         VALUES
-            (#{userId}, #{userPassword}, #{userName},#{userEmail},#{role.name()})
+            (#{userId}, #{userPassword}, #{userName},#{userEmail},#{roleName})
     </insert>
 
 

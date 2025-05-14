@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 @RequestMapping
@@ -35,17 +34,9 @@ public class HomeController {
     public String market(){
         return "/market/market";
     }
+
     @GetMapping("/board")
-    public String board(HttpServletRequest request){
-        HttpSession session = request.getSession(false);
-        if(session == null){
-            return "redirect:/login";
-        }
-//        enum 비교는 equals()대신 == 또는 != 비교 가능(enum은 단일 인스턴스)
-        Member member = (Member) session.getAttribute("member");
-        if(member.getRole() != MemberRole.ADMIN){
-            return "redirect:/login";
-        }
+    public String board(){
         return "/board/board";
     }
 

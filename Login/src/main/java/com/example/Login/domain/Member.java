@@ -17,20 +17,21 @@ public class Member {
 
     private MemberRole role;
 
+//    MyBatis에서 DB -> java로 매핑할 때
+//    문자열 ("user", "admin")을 enum으로 변환해주는 setter
 
-    // resultType으로 매핑할 경우 문자열로 들어오기 때문에 아래 setter 필요
-    public void setRole(MemberRole role){
-//        this.role = MemberRole.valueOf(role.toUpperCase());
-//        toUpperCase는 String에만 있는거고 enum을 써야하니 쓰지마
-        this.role = role;
-    }
 
-    //Db에서 String으로 읽어올 때 (MyBatis용)
     public void setRole(String role){
         this.role = MemberRole.valueOf(role.toUpperCase());
     }
-
-
+    public void setRole(MemberRole role){
+        this.role = role;
+    }
+//    enum 값을 문자열로 출력하거나 DB에 넣을 때 사용할 보조 getter
+//    예: mapper.xml에서 #{roleName}으로 사용
+    public String getRoleName(){
+        return role.name();
+    }
 }
 
 //MyBatis는 enum을 자동으로 매핑 안 해주기 때문에, 수동으로
