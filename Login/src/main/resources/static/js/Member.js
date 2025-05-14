@@ -10,6 +10,8 @@ $(document).ready(function (){
     })
 })
 
+//board페이지 이동
+
 //로그아웃
 function logoutUser(){
     $.ajax({

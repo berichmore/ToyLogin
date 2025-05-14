@@ -8,4 +8,7 @@ public class JoinRequestDto {
     private String userPassword;
     private String userName;
     private String userEmail;
+
+    //optional - 기본값을 user로 처리할 예정
+    private String role;
 }

@@ -2,6 +2,7 @@ package com.example.Login.service;
 
 import com.example.Login.dao.MemberMapper;
 import com.example.Login.domain.Member;
+import com.example.Login.domain.MemberRole;
 import com.example.Login.dto.request.JoinRequestDto;
 import com.example.Login.dto.request.LoginRequestDto;
 import com.example.Login.dto.response.MemberResponseDto;
@@ -26,6 +27,11 @@ public class MemberServiceImpl implements MemberService {
         member.setUserPassword(bCryptPasswordEncoder.encode(joinRequestDto.getUserPassword()));
         member.setUserName(joinRequestDto.getUserName());
         member.setUserEmail(joinRequestDto.getUserEmail());
+
+        //기본 권한 설정
+        member.setRole(MemberRole.USER);
+//        member.setRole(MemberRole.USER.name()); -
+//        -> 이렇게 쓰면 결국 enum이 아닌 String을 쓰는 꼴이 되기에 이리는 하지말아야
 
         memberMapper.insertMember(member);
 

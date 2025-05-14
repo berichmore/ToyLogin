@@ -11,10 +11,22 @@
 <h1>환영합니다.</h1>
 로그인에 성공하신 분들이 거치는 곳입니다.
 <div th:if="${isLogin}">
-<form style="submit">
-    <button type="button" onclick="logoutUser()">로그아웃</button>
-</form>
+    <form style="submit">
+        <button type="button" onclick="logoutUser()">로그아웃</button>
+    </form>
 </div>
+<div>
+    <a th:href="@{/market}">
+        <button type="button">Jay Market(회원제)</button>
+
+    </a>
+    <a th:href="@{/board}">
+        <button type="button">Baord(관리자방)</button>
+    </a>
+</div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/js/Member.js"></script>
 </body>

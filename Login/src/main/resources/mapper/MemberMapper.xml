@@ -13,9 +13,11 @@
 
     <insert id="insertMember" parameterType="com.example.Login.domain.Member">
         INSERT INTO member
-            (user_id, user_password, user_name, user_email)
+            (user_id, user_password, user_name, user_email, role)
         VALUES
-            (#{userId}, #{userPassword}, #{userName},#{userEmail})
+            (#{userId}, #{userPassword}, #{userName},#{userEmail},#{role.name()})
     </insert>
+
+
 
 </mapper>
