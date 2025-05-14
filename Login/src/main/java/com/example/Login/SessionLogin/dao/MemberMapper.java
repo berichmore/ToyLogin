@@ -1,7 +1,7 @@
-package com.example.Login.dao;
+package com.example.Login.SessionLogin.dao;
 
 
-import com.example.Login.domain.Member;
+import com.example.Login.SessionLogin.domain.Member;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

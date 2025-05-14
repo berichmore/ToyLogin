@@ -1,9 +1,9 @@
-package com.example.Login.Controller.RestAPIController;
+package com.example.Login.SessionLogin.Controller.RestAPIController;
 
-import com.example.Login.dto.request.JoinRequestDto;
-import com.example.Login.dto.request.LoginRequestDto;
-import com.example.Login.dto.response.MemberResponseDto;
-import com.example.Login.service.MemberService;
+import com.example.Login.SessionLogin.dto.request.JoinRequestDto;
+import com.example.Login.SessionLogin.dto.request.LoginRequestDto;
+import com.example.Login.SessionLogin.dto.response.MemberResponseDto;
+import com.example.Login.SessionLogin.service.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;

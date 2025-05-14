@@ -1,7 +1,5 @@
-package com.example.Login.Controller;
+package com.example.Login.SessionLogin.Controller;
 
-import com.example.Login.domain.Member;
-import com.example.Login.domain.MemberRole;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;

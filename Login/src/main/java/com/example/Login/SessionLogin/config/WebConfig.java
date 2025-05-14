@@ -1,8 +1,8 @@
-package com.example.Login.config;
+package com.example.Login.SessionLogin.config;
 
 
-import com.example.Login.Interceptor.AdminCheckInterceptor;
-import com.example.Login.Interceptor.LoginCheckInterceptor;
+import com.example.Login.SessionLogin.Interceptor.AdminCheckInterceptor;
+import com.example.Login.SessionLogin.Interceptor.LoginCheckInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

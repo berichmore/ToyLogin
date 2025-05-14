@@ -1,8 +1,8 @@
-package com.example.Login.Interceptor;
+package com.example.Login.SessionLogin.Interceptor;
 
 
-import com.example.Login.domain.Member;
-import com.example.Login.domain.MemberRole;
+import com.example.Login.SessionLogin.domain.Member;
+import com.example.Login.SessionLogin.domain.MemberRole;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;

@@ -1,4 +1,4 @@
-package com.example.Login.dto.response;
+package com.example.Login.SessionLogin.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;
