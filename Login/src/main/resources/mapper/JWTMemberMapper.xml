@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.Login.JWT.dao.JWTMemberMapper">
+    <select id="findByUserId" resultType="com.example.Login.JWT.domain.JWTMember" parameterType="String">
+        SELECT user_id, user_password, role
+        FROM member
+        WHERE user+id = #{userId}
+    </select>
+</mapper>
