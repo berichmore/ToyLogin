@@ -10,7 +10,7 @@ import java.util.Base64;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.secret}")
+    @Value("${jwt.secretKey}")
     private String secretKey;
 
     public boolean validate(String token) throws Exception{
