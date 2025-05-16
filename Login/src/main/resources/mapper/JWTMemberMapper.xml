@@ -7,6 +7,6 @@
     <select id="findByUserId" resultType="com.example.Login.JWT.domain.JWTMember" parameterType="String">
         SELECT user_id, user_password, role
         FROM member
-        WHERE user+id = #{userId}
+        WHERE user_id = #{userId}
     </select>
 </mapper>

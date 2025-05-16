@@ -12,6 +12,8 @@ public class JwtUtil {
     @Value("${jwt.secretKey}")
     private String secretKey;
 
+
+    //유효성 검증
     public boolean validate(String token) throws Exception{
         String[] parts = token.split("\\.");
         if (parts.length != 3) return false;
@@ -20,6 +22,7 @@ public class JwtUtil {
         return expectedSignature.equals(parts[2]);
     }
 
+    //토큰 생성
     public String createToken(String userId, String role, long expireAt) throws Exception{
         String headerJson = "{\"alg\": \"HS256\", \"type\": \"JWT\"}";
         String payloadJson =  String.format("{\"sub\":\"%s\",\"role\":\"%s\", \"exp\":%d}", userId, role, expireAt);
