@@ -22,7 +22,7 @@ public class JWTMemberServiceImpl implements JWTMemberService{
         if( member == null){
             throw new RuntimeException("존재하지 않는 사용자입니다.");
         }
-        if(!bCryptPasswordEncoder.matches(jwtLoginRequestDto.getUserPassword(), member.getUserPasword())){
+        if(!bCryptPasswordEncoder.matches(jwtLoginRequestDto.getUserPassword(), member.getUserPassword())){
             throw new RuntimeException("비밀번호가 일치하지 않습니다.");
         }
 
