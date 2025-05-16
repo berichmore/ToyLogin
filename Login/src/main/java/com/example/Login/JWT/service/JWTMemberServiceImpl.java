@@ -14,6 +14,7 @@ public class JWTMemberServiceImpl implements JWTMemberService{
 
     private final JWTMemberMapper jwtMemberMapper;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final JwtUtil jwtUtil;
 
     @Override
     public String login(JWTLoginRequestDto jwtLoginRequestDto) throws Exception {
@@ -27,6 +28,6 @@ public class JWTMemberServiceImpl implements JWTMemberService{
         }
 
         long expirationTime = System.currentTimeMillis() + (1000 * 60 * 60); //1시간
-        return JwtUtil.createToken(member.getUserId(), member.getRole(), expirationTime);
+        return jwtUtil.createToken(member.getUserId(), member.getRole(), expirationTime);
     }
 }
